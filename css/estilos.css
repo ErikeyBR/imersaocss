@@ -9,6 +9,8 @@ body {
   font-family:Arial;
   background-size: auto 100vh;
   height: 100vh;
+  background-repeat: no-repeat;
+  background-color: teal;
 }
 
 @media (min-width: 400px) {
