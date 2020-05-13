@@ -1,11 +1,41 @@
-body  {
-  background-image:url("background.jpg");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url(../img/background.jpg);
   font-family:Arial;
   background-size: auto 100vh;
   height: 100vh;
 }
+
+@media (min-width: 400px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .menu {
   background-color:white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   }
 .menu ul {
   display:flex;
@@ -16,18 +46,31 @@ body  {
   list-style: none;
 }
 
-a {
-  color: green;
-  text-decoration:none;
+.menu a {
+  color:blue;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 .site-subtitle,
 .site-title {
   text-align:center;
-  color: black;
+  color: whitesmoke;
 }
 .site-subtitle {
 font-style: italic;
+color: silver;
+font-weight: lighter;
+text-align: center;
+font-size: 2em;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
+}
+
+.teste {
+  color: whitesmoke;
 }
