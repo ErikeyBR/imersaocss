@@ -6,7 +6,7 @@
 
 body {
   background-image:url(../img/background.jpg);
-  font-family:Arial;
+  font-family: 'Roboto', sans-serif;
   background-size: auto 100vh;
   height: 100vh;
   background-repeat: no-repeat;
@@ -49,30 +49,90 @@ header {
 }
 
 .menu a {
-  color:blue;
+  color:teal;
   display: block;
   padding: 10px;
   text-decoration: none;
 }
-
-.site-subtitle,
 .site-title {
   text-align:center;
   color: whitesmoke;
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  font-family: 'Dancing Script', cursive;
 }
 .site-subtitle {
 font-style: italic;
-color: silver;
+color: teal;
 font-weight: lighter;
 text-align: center;
 font-size: 2em;
 }
 
+.contato,.portfolio {
+  padding:1em;
+}
+.contato h2,
+.portfolio h2 {
+ color:white;
+ font-size: 2.2em;
+ margin-bottom: .5em;
+font-family: 'Carter One', cursive;
+}
+
+.grid {
+  color: silver;
+  display: grid;
+  gap: 1em;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .contato,
+  .portfolio {
+    padding: 3em 2em 2em;
+    height: 100vh;
+  }
+
+   .grid {
+    grid-template-columns: 200px 200px;
+    height: calc(100vh - 4.5em - 75px);
+  }
+}
+
+@media (min-width: 940px) {
+  .contato,
+  .portfolio {
+    padding: 2em;
+  }
+
+   .grid {
+    grid-template-columns: repeat(4, 200px);
+    height: calc(100vh - 8em - 75px);
+  }
+}
+
+.portfolio figcaption {
+  font-weight: bold;
+}
+
+
+
 .img-portfolio {
   height: 180px;
   width: 180px;
-}
+  border-radius: 10px;
+  object-fit: cover;
 
+}
 .teste {
   color: whitesmoke;
+}
+.icons a {
+  color:white;
+  font-size: 6em;
 }
