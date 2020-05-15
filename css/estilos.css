@@ -1,3 +1,4 @@
+/* soft reset do css */
 * {
   margin: 0;
   padding: 0;
@@ -5,55 +6,101 @@
 }
 
 body {
-  background-image:url(../img/background.jpg);
+  background-image: url('../img/background.jpg');
+  background-size: auto 100vh; 
   font-family: 'Roboto', sans-serif;
-  background-size: auto 100vh;
   height: 100vh;
+  font-size: 12px;
   background-repeat: no-repeat;
   background-color: teal;
 }
 
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
 @media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
   body {
     font-size: 18px;
   }
 }
 
-@media (min-width: 600px) {
+/* breakpoint */
+@media (min-width: 1200px) {
   body {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 header {
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .menu {
-  background-color:white;
+  background-color: white;
   position: fixed;
-  top: 0;
   width: 100vw;
-  }
+  top: 0;
+  z-index: 1;
+}
+
 .menu ul {
-  display:flex;
+  display: flex;
   justify-content: space-around;
 }
 
 .menu li {
-  list-style: none;
+ list-style: none; 
 }
 
 .menu a {
-  color:teal;
   display: block;
-  padding: 10px;
+  padding: 10px 20px;
+  transition: background-color 2s, color 1s;
+  text-decoration: none;
+  color:teal;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: white;
+}
+
+a {
+  color: teal;
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.site-subtitle,
 .site-title {
   text-align:center;
   color: whitesmoke;
@@ -63,44 +110,55 @@ header {
   color: whitesmoke;
   font-family: 'Dancing Script', cursive;
 }
-.site-subtitle {
-font-style: italic;
-color: teal;
-font-weight: lighter;
-text-align: center;
-font-size: 2em;
+
+.site-title {
+  font-size: 4em;
 }
 
-.contato,.portfolio {
-  padding:1em;
+.site-subtitle {
+ font-style: italic;
+ line-height: 1.8em;
+ color: teal;
+ font-weight: lighter;
+ text-align: center;
+ font-size: 2em;
 }
+
+.contato,
+.portfolio {
+  padding: 1em;
+  min-height: 100vh;
+}
+
 .contato h2,
 .portfolio h2 {
- color:white;
- font-size: 2.2em;
- margin-bottom: .5em;
-font-family: 'Carter One', cursive;
+  font-family: 'Carter One', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
 }
 
-.grid {
-  color: silver;
+.portfolio .grid {
   display: grid;
-  gap: 1em;
+  gap: 2em;
   align-content: center;
   justify-content: center;
   text-align: center;
+  color: silver;
 }
 
-@media (min-width: 400px) {
-  .contato,
-  .portfolio {
-    padding: 3em 2em 2em;
-    height: 100vh;
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
   }
+}
 
-   .grid {
-    grid-template-columns: 200px 200px;
-    height: calc(100vh - 4.5em - 75px);
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
   }
 }
 
@@ -121,17 +179,41 @@ font-family: 'Carter One', cursive;
 }
 
 
+.portfolio figure {
+  text-align: center;
+}
 
 .img-portfolio {
   height: 180px;
-  width: 180px;
-  border-radius: 10px;
+  width: 240px;
   object-fit: cover;
-
+  object-position: left bottom;
+  transition: transform 100ms;
 }
+
+.img-portfolio:hover {
+  transform: scale(1.2);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 8em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover  {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+}
+
 .teste {
   color: whitesmoke;
-}
+
 .icons a {
   color:white;
   font-size: 6em;
