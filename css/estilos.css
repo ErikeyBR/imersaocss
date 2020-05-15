@@ -64,8 +64,6 @@ header {
   display: block;
   padding: 10px 20px;
   transition: background-color 2s, color 1s;
-  text-decoration: none;
-  color:teal;
 }
 
 .menu a:active,
@@ -86,7 +84,7 @@ a:hover {
 .titulo {
   transform: scale(0.2) translateY(50vh);
   opacity: 0;
-  animation: linear 2s animacaoTitulo forwards;
+  animation: 1s ease 2s animacaoTitulo forwards;
 }
 
 @keyframes animacaoTitulo {
@@ -104,24 +102,18 @@ a:hover {
 .site-title {
   text-align:center;
   color: whitesmoke;
-  font-size: 3em;
-  line-height: 1em;
-  margin-bottom: 20px;
-  color: whitesmoke;
-  font-family: 'Dancing Script', cursive;
+  
 }
 
 .site-title {
   font-size: 4em;
+  font-family: 'Dancing Script', cursive;
 }
 
 .site-subtitle {
  font-style: italic;
  line-height: 1.8em;
- color: teal;
- font-weight: lighter;
- text-align: center;
- font-size: 2em;
+ font-family: 'Dancing Script', cursive;
 }
 
 .contato,
@@ -141,10 +133,6 @@ a:hover {
 .portfolio .grid {
   display: grid;
   gap: 2em;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  color: silver;
 }
 
 @media (min-width: 560px) {
@@ -161,23 +149,6 @@ a:hover {
     height: calc(100vh - 8em - 48px);
   }
 }
-
-@media (min-width: 940px) {
-  .contato,
-  .portfolio {
-    padding: 2em;
-  }
-
-   .grid {
-    grid-template-columns: repeat(4, 200px);
-    height: calc(100vh - 8em - 75px);
-  }
-}
-
-.portfolio figcaption {
-  font-weight: bold;
-}
-
 
 .portfolio figure {
   text-align: center;
@@ -213,8 +184,3 @@ a:hover {
 
 .teste {
   color: whitesmoke;
-
-.icons a {
-  color:white;
-  font-size: 6em;
-}
