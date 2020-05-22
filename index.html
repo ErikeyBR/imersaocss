@@ -8,12 +8,10 @@
    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Dancing+Script:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
    <script src="https://kit.fontawesome.com/c54e6ff457.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
 <header>
   <nav class="menu">
-    <ul>
+    <ul class="container">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#portfolio">Portfólio</a></li>
       <li><a href="#contato">Suporte</a></li>
@@ -24,29 +22,102 @@
   <h2 class="site-subtitle">Sejam bem-vindos!</h2>
   </div>
 </header>
-<section class="portfolio" id="portfolio">
-  <h2>Portfólio</h2>
-  <div class="grid"> 
-  <figure>
-    <img class="img-portfolio" src="./img/html.png" alt="HTML">
-    <figcaption class="teste">HTML</figcaption>
-  </figure>
-  <figure>
-    <img class="img-portfolio" src="./img/css.jpg" alt=">CSS">
-    <figcaption class="teste">CSS</figcaption>
-  </figure>
-  <figure>
-    <img class="img-portfolio" src="./img/webdesign.png" alt="Web design">
-    <figcaption class="teste">Web design</figcaption>
-  </figure>
-  <figure>
-    <img class="img-portfolio" src="./img/computaçao.jpg" alt="Projetos pessoais">
-    <figcaption class="teste">Projetos pessoais</figcaption>
-  </figure>
-</div>
-</section>
+ <section class="sobre container" id="sobre">
+ <h2>Sobre</h2>
 
-<section class="contato" id="contato">
+        <figure class="avatar">
+        <img src="./img/paulo-avatar.jpg" alt="Paulo Silveira">
+        </figure>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem
+        atque architecto, odit doloremque consectetur vero! Aut fugit neque
+        sequi id non rerum facilis incidunt explicabo. Officia beatae vitae
+        laudantium!
+      </p>
+
+      <p>
+        Tenetur dicta rem ut aliquid quo eos non expedita impedit. Ipsa sapiente
+        corrupti iusto eum similique voluptatum magni velit sit ab, vitae quas,
+        perspiciatis excepturi, vel quaerat itaque dicta repudiandae?
+      </p>
+
+      <p>
+        Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+        repellendus! Sequi libero accusantium facere quis, dolores voluptate
+        itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+        facere aperiam quibusdam inventore.
+      </p>
+
+      <p>
+        Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+        repellendus! Sequi libero accusantium facere quis, dolores voluptate
+        itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+        facere aperiam quibusdam inventore.
+      </p>
+      <p>
+        Unde necessitatibus fugiat similique aperiam ipsa voluptatum ex commodi
+        repellendus! Sequi libero accusantium facere quis, dolores voluptate
+        itaque distinctio natus iure, quibusdam eaque. Laborum incidunt nesciunt
+        facere aperiam quibusdam inventore.
+      </p>
+
+      <p>
+        Este site foi construído durante a
+        <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>
+        😻
+      </p>
+    </section>
+<section class="portfolio container" id="portfolio">
+      <h2>Projetos</h2>
+
+      <div class="grid">
+      
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/html.png" alt="HTML">
+            </figure>
+            <div class="card-back">
+              <h3>HTML</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/css.jpg" alt="CSS">
+            </figure>
+            <div class="card-back">
+              <h3>CSS</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/webdesign.png" alt="Web design">
+            </figure>
+            <div class="card-back">
+              <h3>Web design</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/computaçao.jpg" alt="Projetos pessoais">
+            </figure>
+            <div class="card-back">
+              <h3>Projetos pessoais</h3>
+            </div>
+          </div>
+        </div>
+    </section>
+<section class="contato container" id="contato">
     <h2>Contato</h2>
 
     <div class="grid icons">
